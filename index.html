@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Meal - Descubra o Chef em Você</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body class="body-base">
+    <nav class="topo-navbar">
+        <div class="container">
+            <div class="logo">TheMeal</div>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link-item active">Início</a></li>
+                <li><a href="#" class="nav-link-item">Meu Perfil</a></li>
+                <li><a href="#" class="nav-link-item">Explorar</a></li>
+                <li><a href="#" class="nav-link-item">Categorias</a></li>
+                <li><a href="#" class="nav-link-item">Sobre</a></li>
+                <li><a href="#" class="nav-link-item">Sair</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção HERO (destaque) -->
+     
+    <section class="seção-hero">
+        <div class="container hero-content">
+            <h1 class="hero-title">Descubra o Chef que Existe em Você</h1>
+            <p class="hero-description">Explore receitas deliciosas, compartilhe suas criações e conecte-se com outros
+                amantes da culinária.</p>
+            <button id="startNowButton" class="start-now-button">COMEÇAR AGORA</button>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+
+    <main class="main-content">
+        <section class="search-section-alt">
+            <div class="search-input-group">
+                <input type="text" id="searchInput" placeholder="Buscar receitas..." class="search-input-alt">
+                <button id="searchButton" class="search-button-alt">Buscar</button>
+            </div>
+        </section>
+
+        <!-- Filters Section -->
+
+        <section class="section-card category-section">
+            <div id="categoriesContainer" class="categories-container-alt">
+                <button class="category-button-alt active" data-category="all">Todas</button>
+                <div class="loading-message">
+                    <div class="loader"></div>
+                    <p>Carregando categorias...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes Section -->
+
+        <section class="section-results">
+            <h2 class="section-title" id="resultsTitle">Receitas em Destaque</h2>
+            <div id="mealsContainer" class="meals-grid">
+                <!-- Meals will be loaded here by JavaScript -->
+                <div class="loading-message col-span-full" id="mealsLoaderContainer">
+                    <div class="loader"></div>
+                    <p>Carregando receitas...</p>
+                </div>
+            </div>
+            <p id="noResultsMessage" class="no-results-message hidden">Nenhuma receita encontrada para a sua busca.</p>
+        </section>
+    </main>
+
+    <!-- Modal de Detalhes da Receita -->
+
+    <div id="mealDetailModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" aria-label="Fechar">&times;</span>
+            <div id="mealDetailContent" class="modal-body">
+
+                <!-- Detalhes da receita serão carregados aqui -->
+
+                <div class="loading-message">
+                    <div class="loader"></div>
+                    <p>Carregando detalhes da receita...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Rodapé -->
+    <footer class="footer-base">
+        <p class="footer-text">&copy; 2025 TheMeal. Todos os direitos reservados.</p>
+        <p class="footer-small-text">Dados fornecidos por <a href="https://www.themealdb.com/api.php" target="_blank"
+                class="footer-link">TheMealDB</a>.</p>
+    </footer>
+
+    <script src="JS/index.js"></script>
+
+</body>
+
+</html>
